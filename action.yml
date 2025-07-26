@@ -1,0 +1,22 @@
+name: 'Deploy Monitoring Stack (Grafana & Prometheus)'
+description: 'Deploys Grafana and Prometheus using Helm on an EKS cluster'
+inputs:
+  aws-access-key-id:
+    required: true
+    description: 'AWS Access Key ID'
+  aws-secret-access-key:
+    required: true
+    description: 'AWS Secret Access Key'
+  aws-region:
+    required: true
+    description: 'AWS Region'
+  kubeconfig:
+    required: true
+    description: 'Kubeconfig contents'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  icon: 'anchor'
+  color: 'blue'
